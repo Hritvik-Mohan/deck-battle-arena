@@ -1,40 +1,46 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Deck Battle Arena 🃏
 
-## Getting Started
+DeckBattle Arena is a real-time multiplayer card game application that allows up to 4 players to compete using a standard deck of 52 cards. The game features action cards with special abilities such as skipping turns, reversing play order, and drawing extra cards.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Real-time Gameplay:** Utilizes Socket.io for real-time communication between players.
+- **Player Interaction:** Players can join or create games and take turns playing cards.
+- **Action Cards:** Special cards (Aces, Kings, Queens, Jacks) trigger unique game effects.
+- **Responsive Design:** Built with React-Bootstrap for a responsive and intuitive user interface.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+- **Next.js**: Framework for server-side rendering and static site generation.
+- **Socket.io**: Enables real-time, bidirectional communication between clients and server.
+- **Express**: Web framework for building the server-side logic.
+- **MongoDB**: NoSQL database for storing game state and user data.
+- **Mongoose**: ODM (Object Data Modeling) library for MongoDB and Node.js.
+- **React-Bootstrap**: Provides Bootstrap components as React components for styling.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Installation
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+1. **Clone the repository:**
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+   ```bash
+   git clone https://github.com/Hritvik-Mohan/deck-battle-arena
+   cd deck-battle-arena
+2. **Install dependencies:**
 
-## Learn More
+    ```bash
+    npm install
+3.  **Set up environment variables:**
 
-To learn more about Next.js, take a look at the following resources:
+- Create a .env file in the root directory and add the necessary environment variables. Example:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    ```bash
+    MONGO_URI=<mongodb_connection_string>
+4. **Run the development server:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+    ```bash
+    npm run dev
+## Usage
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Create a Game:** Navigate to the game creation page to start a new game.
+- **Join a Game:** Enter a game ID to join an existing game.
+- **Play the Game:** Follow the on-screen instructions to play your cards and interact with other players.
